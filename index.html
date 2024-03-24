@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AICOIN График Цены</title>
+    <!-- Подключаем стили для дизайна страницы -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключаем библиотеку для построения графиков -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>AICOIN График Цены</h1>
+    </header>
+
+    <div class="container">
+        <div id="chart"></div>
+
+        <aside class="sidebar">
+            <h2>Рекламные посты</h2>
+            <div class="banner">
+                <img src="C:\Users\Айдар\Desktop\Новая папка (4)\images\banner.jpg" class="bannerimage">
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; Все права защищены 2024</p>
+    </footer>
+
+    <script>
+        // Пример данных для графика (можно заменить на реальные данные)
+        var timestamps = ['2024-01-01', '2024-01-02', '2024-01-03']; // пример временных меток
+        var prices = [100, 120, 90]; // пример цен в рублях
+
+        // Размеры графика
+        var layout = {
+            title: 'Цена AICOIN в рублях',
+            xaxis: {
+                title: 'Дата'
+            },
+            yaxis: {
+                title: 'Цена в рублях'
+            }
+        };
+
+        // Отображение графика
+        Plotly.newPlot('chart', [{
+            x: timestamps,
+            y: prices,
+            type: 'scatter',
+            mode: 'lines+markers'
+        }], layout);
+    </script>
+</body>
+</html>
